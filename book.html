@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book — PageTurn Books</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo"><i class="fa-solid fa-book-open-reader"></i> PageTurn</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link active">Shop</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li id="nav-admin" style="display:none"><a href="admin.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></a>
+        <div id="nav-auth"><a href="auth.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></div>
+        <div id="nav-user" class="nav-user-menu" style="display:none">
+          <div class="nav-user-toggle"><i class="fa-solid fa-circle-user"></i><span id="nav-username"></span></div>
+          <div class="nav-dropdown"><button id="sign-out-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button></div>
+        </div>
+        <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div style="background:var(--cream-dark);padding:12px 0;border-bottom:1px solid var(--cream-dark)">
+    <div class="container" style="font-size:0.85rem;color:var(--text-light)">
+      <a href="index.html" style="color:var(--text-light);cursor:pointer">Home</a>
+      <span style="margin:0 8px">/</span>
+      <a href="shop.html" style="color:var(--text-light);cursor:pointer">Shop</a>
+      <span style="margin:0 8px">/</span>
+      <span id="breadcrumb-title" style="color:var(--text-dark)">Book</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="book-detail-layout">
+      <div class="book-detail-cover">
+        <img id="book-cover" src="assets/images/placeholder.svg" alt="Book cover">
+      </div>
+      <div class="book-detail-info">
+        <span class="book-detail-genre" id="book-genre"></span>
+        <h1 class="book-detail-title" id="book-title">Loading...</h1>
+        <p class="book-detail-author" id="book-author"></p>
+        <div class="book-detail-price" id="book-price"></div>
+        <p class="book-detail-desc" id="book-description"></p>
+
+        <div class="book-meta-grid">
+          <div class="book-meta-item">
+            <span class="meta-label">Pages</span>
+            <span class="meta-value" id="book-pages">—</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="meta-label">Publisher</span>
+            <span class="meta-value" id="book-publisher">—</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="meta-label">Language</span>
+            <span class="meta-value" id="book-language">—</span>
+          </div>
+          <div class="book-meta-item">
+            <span class="meta-label">ISBN</span>
+            <span class="meta-value" id="book-isbn">—</span>
+          </div>
+        </div>
+
+        <div class="book-add-row">
+          <button id="add-to-cart-btn">
+            <i class="fa-solid fa-cart-plus"></i> Add to Cart
+          </button>
+          <a href="shop.html" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-left"></i> Back to Shop
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="related-section">
+    <div class="container">
+      <h2 class="section-title" style="margin-bottom:32px">You Might Also Like</h2>
+      <div class="books-grid" id="related-books"></div>
+    </div>
+  </section>
+
+    <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <i class="fa-solid fa-book-open-reader"></i> PageTurn
+        </div>
+        <p>Your neighbourhood bookshop, online. Discover stories that change the way you see the world.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/nikoloz_bocho/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/nikolozi.bochorishvili.18" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Books</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="about.html#contact">Contact Us</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns &amp; Refunds</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>500 Book Street, San Francisco, CA 94158</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+995 555 555 555</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
+      <span>Crafted with <i class="fa-solid fa-heart" style="color:var(--rust);font-size:0.7rem"></i> for book lovers</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/book.js"></script>
+  <script>
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
+  </script>
+</body>
+</html>

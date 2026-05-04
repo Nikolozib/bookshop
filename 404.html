@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — PageTurn Books</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .not-found {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 24px;
+    }
+    .not-found-inner { max-width: 520px; }
+    .not-found-code {
+      font-family: var(--font-serif);
+      font-size: clamp(6rem, 16vw, 10rem);
+      line-height: 1;
+      color: var(--cream-dark);
+      font-weight: 700;
+      letter-spacing: -4px;
+      margin-bottom: 8px;
+    }
+    .not-found-icon {
+      font-size: 3rem;
+      color: var(--gold);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .not-found h2 {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      color: var(--text-dark);
+    }
+    .not-found p {
+      color: var(--text-light);
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+    .not-found-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo"><i class="fa-solid fa-book-open-reader"></i> PageTurn</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li id="nav-admin" style="display:none"><a href="admin.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></a>
+        <div id="nav-auth"><a href="auth.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></div>
+        <div id="nav-user" class="nav-user-menu" style="display:none">
+          <div class="nav-user-toggle"><i class="fa-solid fa-circle-user"></i><span id="nav-username"></span></div>
+          <div class="nav-dropdown"><button id="sign-out-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button></div>
+        </div>
+        <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="not-found">
+    <div class="not-found-inner">
+      <div class="not-found-code">404</div>
+      <i class="fa-solid fa-book-skull not-found-icon"></i>
+      <h2>This Page Went Missing</h2>
+      <p>Looks like this page took a long walk off a short shelf. It might have been moved, deleted, or perhaps it never existed at all.</p>
+      <div class="not-found-actions">
+        <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Go Home</a>
+        <a href="shop.html" class="btn btn-outline"><i class="fa-solid fa-book-open"></i> Browse Books</a>
+      </div>
+    </div>
+  </div>
+
+    <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <i class="fa-solid fa-book-open-reader"></i> PageTurn
+        </div>
+        <p>Your neighbourhood bookshop, online. Discover stories that change the way you see the world.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/nikoloz_bocho/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/nikolozi.bochorishvili.18" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Books</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="about.html#contact">Contact Us</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns &amp; Refunds</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>500 Book Street, San Francisco, CA 94158</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+995 555 555 555</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
+      <span>Crafted with <i class="fa-solid fa-heart" style="color:var(--rust);font-size:0.7rem"></i> for book lovers</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script>
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
+  </script>
+</body>
+</html>

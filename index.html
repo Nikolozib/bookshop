@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PageTurn — Your Favourite Bookshop</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo">
+        <i class="fa-solid fa-book-open-reader"></i> PageTurn
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li id="nav-admin" style="display:none"><a href="admin.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-icon-btn" title="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </a>
+        <div id="nav-auth">
+          <a href="auth.html" class="btn-nav-login">
+            <i class="fa-solid fa-right-to-bracket"></i> Sign In
+          </a>
+        </div>
+        <div id="nav-user" class="nav-user-menu" style="display:none">
+          <div class="nav-user-toggle">
+            <i class="fa-solid fa-circle-user"></i>
+            <span id="nav-username"></span>
+            <i class="fa-solid fa-chevron-down" style="font-size:0.7rem"></i>
+          </div>
+          <div class="nav-dropdown">
+            <button id="sign-out-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button>
+          </div>
+        </div>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-eyebrow">Welcome to PageTurn</span>
+        <h1 class="hero-title">
+          Every Story Deserves to Be <em>Read</em>
+        </h1>
+        <p class="hero-subtitle">
+          Discover thousands of titles across every genre. From timeless classics to the latest releases — your next favourite book is here.
+        </p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn btn-primary">
+            <i class="fa-solid fa-magnifying-glass"></i> Browse Books
+          </a>
+          <a href="about.html" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.85)">
+            Our Story
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-book-card">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80" alt="Books on shelf">
+        </div>
+        <div class="hero-book-card">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80" alt="Open book">
+        </div>
+        <div class="hero-book-card featured">
+          <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80" alt="Library">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-number">5,000+</div>
+        <div class="stat-label">Titles in Stock</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">120+</div>
+        <div class="stat-label">Genres</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24hr</div>
+        <div class="stat-label">Fast Dispatch</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4.9</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="section" style="background:var(--cream)">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured Books</h2>
+          <p class="section-subtitle">Hand-picked titles from our curators</p>
+        </div>
+        <a href="shop.html" class="btn btn-outline">View All <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="genre-filters">
+        <button class="genre-filter-btn active" data-genre="all">All</button>
+        <button class="genre-filter-btn" data-genre="Fiction">Fiction</button>
+        <button class="genre-filter-btn" data-genre="Mystery">Mystery</button>
+        <button class="genre-filter-btn" data-genre="Science">Science</button>
+        <button class="genre-filter-btn" data-genre="History">History</button>
+        <button class="genre-filter-btn" data-genre="Biography">Biography</button>
+      </div>
+      <div class="books-grid" id="featured-grid">
+        <div class="loading-books"><i class="fa-solid fa-spinner fa-spin"></i> Loading books...</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="feature-strip">
+    <div class="container">
+      <div class="feature-strip-inner">
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3>Free Shipping</h3>
+          <p>On all orders over $35. Fast and reliable delivery to your door.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+          <h3>Easy Returns</h3>
+          <p>Not happy? Return within 30 days for a full refund, no questions asked.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+          <h3>Expert Support</h3>
+          <p>Our book-lovers team is available 7 days a week to help you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section" style="background:var(--cream-dark)">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">New Arrivals</h2>
+          <p class="section-subtitle">Fresh off the press — just added to our collection</p>
+        </div>
+        <a href="shop.html?sort=newest" class="btn btn-outline">See More <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="books-grid" id="new-arrivals-grid">
+        <div class="loading-books"><i class="fa-solid fa-spinner fa-spin"></i> Loading...</div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="newsletter-section">
+    <div class="container">
+      <h2 class="section-title">Join Our Reading Community</h2>
+      <p class="section-subtitle">Subscribe and get 15% off your first order, plus curated reading lists every month.</p>
+      <form class="newsletter-form" id="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+        <button type="submit" class="newsletter-btn">
+          <i class="fa-solid fa-paper-plane"></i> Subscribe
+        </button>
+      </form>
+      <p id="newsletter-msg" class="form-msg" style="margin-top:16px;text-align:center;background:transparent"></p>
+    </div>
+  </section>
+
+  
+    <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <i class="fa-solid fa-book-open-reader"></i> PageTurn
+        </div>
+        <p>Your neighbourhood bookshop, online. Discover stories that change the way you see the world.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/nikoloz_bocho/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/nikolozi.bochorishvili.18" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Books</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="about.html#contact">Contact Us</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns &amp; Refunds</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>500 Book Street, San Francisco, CA 94158</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+995 555 555 555</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
+      <span>Crafted with <i class="fa-solid fa-heart" style="color:var(--rust);font-size:0.7rem"></i> for book lovers</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/home.js"></script>
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
+  </script>
+</body>
+</html>

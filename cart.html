@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart — PageTurn Books</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="nav-logo"><i class="fa-solid fa-book-open-reader"></i> PageTurn</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="shop.html" class="nav-link">Shop</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li id="nav-admin" style="display:none"><a href="admin.html" class="nav-link">Admin</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></a>
+        <div id="nav-auth"><a href="auth.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></div>
+        <div id="nav-user" class="nav-user-menu" style="display:none">
+          <div class="nav-user-toggle"><i class="fa-solid fa-circle-user"></i><span id="nav-username"></span></div>
+          <div class="nav-dropdown"><button id="sign-out-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button></div>
+        </div>
+        <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Your Cart</h1>
+      <p>Review your items before checking out</p>
+    </div>
+  </div>
+
+  <div class="container">
+    
+    <div id="checkout-success">
+      <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+      <h2>Order Placed!</h2>
+      <p>Thank you for your purchase. You'll receive a confirmation email shortly.</p>
+      <a href="shop.html" class="btn btn-primary"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a>
+    </div>
+
+    <div id="cart-page-content">
+      <div class="cart-layout">
+        
+        <div>
+          <div class="cart-items-section">
+            <h2 class="cart-section-title">Items</h2>
+            <div id="cart-empty" style="display:none">
+              <i class="fa-solid fa-cart-shopping" style="font-size:3rem;color:var(--cream-dark);display:block;margin-bottom:16px;text-align:center"></i>
+              <p style="text-align:center;color:var(--text-light);margin-bottom:24px">Your cart is empty.</p>
+              <div style="text-align:center"><a href="shop.html" class="btn btn-primary">Browse Books</a></div>
+            </div>
+            <div id="cart-items"></div>
+          </div>
+        </div>
+
+        
+        <div>
+          <div class="cart-summary" id="cart-summary" style="display:none">
+            <h2 class="cart-section-title">Order Summary</h2>
+            <div class="summary-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+            <div class="summary-row"><span>Shipping</span><span id="cart-shipping">—</span></div>
+            <div class="summary-row total"><span>Total</span><span id="cart-total">$0.00</span></div>
+            <p style="font-size:0.8rem;color:var(--text-light);margin-top:4px">Free shipping on orders over $35</p>
+
+            
+            <div class="checkout-section">
+              <h3>Delivery Details</h3>
+              <form id="checkout-form">
+                <div class="form-group">
+                  <label for="checkout-name">Full Name</label>
+                  <input type="text" id="checkout-name" class="form-control" required placeholder="Jon Doe">
+                </div>
+                <div class="form-group">
+                  <label for="checkout-email">Email</label>
+                  <input type="email" id="checkout-email" class="form-control" required placeholder="JonDoe@gmail.com">
+                </div>
+                <div class="form-group">
+                  <label for="checkout-address">Address</label>
+                  <input type="text" id="checkout-address" class="form-control" required placeholder="500 Book Street">
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="checkout-city">City</label>
+                    <input type="text" id="checkout-city" class="form-control" required placeholder="San Francisco">
+                  </div>
+                  <div class="form-group">
+                    <label for="checkout-zip">ZIP Code</label>
+                    <input type="text" id="checkout-zip" class="form-control" required placeholder="94158">
+                  </div>
+                </div>
+                <button type="submit" class="checkout-submit">
+                  <i class="fa-solid fa-lock"></i> Place Order
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <i class="fa-solid fa-book-open-reader"></i> PageTurn
+        </div>
+        <p>Your neighbourhood bookshop, online. Discover stories that change the way you see the world.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/nikoloz_bocho/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/nikolozi.bochorishvili.18" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All Books</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="about.html#contact">Contact Us</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns &amp; Refunds</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>500 Book Street, San Francisco, CA 94158</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+995 555 555 555</span></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
+      <span>Crafted with <i class="fa-solid fa-heart" style="color:var(--rust);font-size:0.7rem"></i> for book lovers</span>
+    </div>
+  </footer>
+
+  <script type="module" src="js/nav.js"></script>
+  <script type="module" src="js/cart.js"></script>
+  <script>
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
+  </script>
+</body>
+</html>
