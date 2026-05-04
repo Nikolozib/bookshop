@@ -196,7 +196,7 @@
     padding: 16px 0;
     border-bottom: 1px solid rgba(201,168,76,0.15);
   }
-  .nav-links.open { display: flex; }
-  .nav-link { width: 100%; padding: 12px 24px; border-radius: 0; }
+  .nav-links.open { display: flex; justify-content: center; align-items: center; }
+  .nav-link { width: 100%; padding: 8px 15px; border-radius: 5px; }
   .navbar-inner { position: relative; }
 }

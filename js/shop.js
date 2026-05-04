@@ -27,7 +27,7 @@ function normalizeBook(id, data) {
 
 export async function loadBooks(filters = {}) {
   try {
-    
+
     let snap = null;
     let constraints = [];
 
@@ -87,8 +87,8 @@ export function createBookCard(book) {
         <p class="book-author">${book.author}</p>
         <div class="book-price-row">
           ${book.isSale && book.originalPrice
-            ? `<span class="price-original">$${Number(book.originalPrice).toFixed(2)}</span>`
-            : ''}
+      ? `<span class="price-original">$${Number(book.originalPrice).toFixed(2)}</span>`
+      : ''}
           <span class="price-current">$${Number(book.price).toFixed(2)}</span>
         </div>
       </div>
