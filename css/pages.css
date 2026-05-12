@@ -14,7 +14,7 @@
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-lg);
 }
-.book-detail-info {}
+
 .book-detail-genre {
   font-size: 0.8rem;
   text-transform: uppercase;
