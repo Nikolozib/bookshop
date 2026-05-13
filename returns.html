@@ -1,130 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Returns &amp; Refunds</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
-  <nav class="navbar" id="navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-logo"><i class="fa-solid fa-book-open-reader"></i> PageTurn</a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="shop.html" class="nav-link">Shop</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li id="nav-admin" style="display:none"><a href="admin.html" class="nav-link">Admin</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></a>
-        <div id="nav-auth"><a href="auth.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></div>
-        <div id="nav-user" class="nav-user-menu" style="display:none">
-          <div class="nav-user-toggle"><i class="fa-solid fa-circle-user"></i><span id="nav-username"></span></div>
-          <div class="nav-dropdown"><button id="sign-out-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button></div>
-        </div>
-        <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </nav>
-
-  <div class="page-header">
-    <div class="container">
-      <h1>Returns &amp; Refunds</h1>
-      <p>Shopping for books should feel effortless — including when something isn't quite right</p>
-    </div>
-  </div>
-
-  <section class="section">
-    <div class="container">
-      <article class="legal-doc">
-        <p class="legal-updated">Last updated: 13 May 2026</p>
-        <p>At PageTurn, we want every parcel to arrive as carefully chosen as the books inside it. If your order doesn't meet that standard, we'll make it right — kindly, clearly, and without fuss.</p>
-
-        <h2>Our 30-day promise</h2>
-        <p>You may return most new, unread books within <strong>30 days</strong> of delivery for a full refund of the item price. We ask only that copies remain in the condition you received them — no dog-ears, coffee rings, or surprise annotations (charming as they may be).</p>
-
-        <h2>What we can refund</h2>
-        <ul>
-          <li>Books that arrive damaged, defective, or incorrect — we'll replace them or refund you, and we'll cover the return postage.</li>
-          <li>Change-of-heart returns on eligible titles within 30 days, provided they're unread and in resaleable condition.</li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Returns &amp; Refunds</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo"
+          ><i class="fa-solid fa-book-open-reader"></i> PageTurn</a
+        >
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li id="nav-admin" style="display: none">
+            <a href="admin.html" class="nav-link">Admin</a>
+          </li>
         </ul>
-
-        <h2>What we can't refund</h2>
-        <ul>
-          <li>Digital products, gift cards, or items marked final sale at checkout.</li>
-          <li>Books that show signs of use, missing pages, or removed shrink-wrap where applicable.</li>
-        </ul>
-
-        <h2>How to start a return</h2>
-        <ol>
-          <li>Email us at <a href="mailto:JonDoe@gmail.com">JonDoe@gmail.com</a> with your order number and a brief description of the issue.</li>
-          <li>We'll reply within one business day with a return authorisation and the next steps.</li>
-          <li>Pack the book securely (original packaging helps, but a sturdy box works just as well) and send it using the instructions we provide.</li>
-        </ol>
-
-        <h2>Refunds &amp; timing</h2>
-        <p>Once we receive and inspect your return, we'll process your refund to the original payment method. Please allow <strong>5–10 business days</strong> for the funds to appear — banks vary, and we're not always as quick as we'd like, either.</p>
-        <p>If you paid with a gift card or store credit, we'll restore the balance to your PageTurn account.</p>
-
-        <h2>Return shipping</h2>
-        <p>For damaged, faulty, or incorrect items, we cover return shipping. For change-of-heart returns, return postage is the customer's responsibility unless we specify otherwise in your return email.</p>
-
-        <p class="legal-note">Questions? We're only an email away — visit our <a href="contact.html">Contact</a> page or write to JonDoe@gmail.com and a real human on our team will help.</p>
-      </article>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo-wrap">
-          <i class="fa-solid fa-book-open-reader"></i> PageTurn
-        </div>
-        <p>Your neighbourhood bookshop, online. Discover stories that change the way you see the world.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/nikoloz_bocho/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/nikolozi.bochorishvili.18" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <div class="nav-actions">
+          <a href="cart.html" class="nav-icon-btn"
+            ><i class="fa-solid fa-cart-shopping"></i
+            ><span class="cart-badge">0</span></a
+          >
+          <div id="nav-auth">
+            <a href="auth.html" class="btn-nav-login"
+              ><i class="fa-solid fa-right-to-bracket"></i> Sign In</a
+            >
+          </div>
+          <div id="nav-user" class="nav-user-menu" style="display: none">
+            <div class="nav-user-toggle">
+              <i class="fa-solid fa-circle-user"></i
+              ><span id="nav-username"></span>
+            </div>
+            <div class="nav-dropdown">
+              <button id="sign-out-btn">
+                <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+              </button>
+            </div>
+          </div>
+          <button class="menu-toggle" id="menu-toggle">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.html">All Books</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Help</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="returns.html">Returns &amp; Refunds</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>500 Book Street, San Francisco, CA 94158</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+995 555 555 555</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span></div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
-      <span>Crafted with <i class="fa-solid fa-heart" style="color:var(--rust);font-size:0.7rem"></i> for book lovers</span>
-    </div>
-  </footer>
+    </nav>
 
-  <script type="module" src="js/nav.js"></script>
-  <script>
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
-  </script>
-</body>
+    <div class="page-header">
+      <div class="container">
+        <h1>Returns &amp; Refunds</h1>
+        <p>
+          Shopping for books should feel effortless — including when something
+          isn't quite right
+        </p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <article class="legal-doc">
+          <p class="legal-updated">Last updated: 13 May 2026</p>
+          <p>
+            At PageTurn, we want every parcel to arrive as carefully chosen as
+            the books inside it. If your order doesn't meet that standard, we'll
+            make it right — kindly, clearly, and without fuss.
+          </p>
+
+          <h2>Our 30-day promise</h2>
+          <p>
+            You may return most new, unread books within
+            <strong>30 days</strong> of delivery for a full refund of the item
+            price. We ask only that copies remain in the condition you received
+            them — no dog-ears, coffee rings, or surprise annotations (charming
+            as they may be).
+          </p>
+
+          <h2>What we can refund</h2>
+          <ul>
+            <li>
+              Books that arrive damaged, defective, or incorrect — we'll replace
+              them or refund you, and we'll cover the return postage.
+            </li>
+            <li>
+              Change-of-heart returns on eligible titles within 30 days,
+              provided they're unread and in resaleable condition.
+            </li>
+          </ul>
+
+          <h2>What we can't refund</h2>
+          <ul>
+            <li>
+              Digital products, gift cards, or items marked final sale at
+              checkout.
+            </li>
+            <li>
+              Books that show signs of use, missing pages, or removed
+              shrink-wrap where applicable.
+            </li>
+          </ul>
+
+          <h2>How to start a return</h2>
+          <ol>
+            <li>
+              Email us at
+              <a href="mailto:JonDoe@gmail.com">JonDoe@gmail.com</a> with your
+              order number and a brief description of the issue.
+            </li>
+            <li>
+              We'll reply within one business day with a return authorisation
+              and the next steps.
+            </li>
+            <li>
+              Pack the book securely (original packaging helps, but a sturdy box
+              works just as well) and send it using the instructions we provide.
+            </li>
+          </ol>
+
+          <h2>Refunds &amp; timing</h2>
+          <p>
+            Once we receive and inspect your return, we'll process your refund
+            to the original payment method. Please allow
+            <strong>5–10 business days</strong> for the funds to appear — banks
+            vary, and we're not always as quick as we'd like, either.
+          </p>
+          <p>
+            If you paid with a gift card or store credit, we'll restore the
+            balance to your PageTurn account.
+          </p>
+
+          <h2>Return shipping</h2>
+          <p>
+            For damaged, faulty, or incorrect items, we cover return shipping.
+            For change-of-heart returns, return postage is the customer's
+            responsibility unless we specify otherwise in your return email.
+          </p>
+
+          <p class="legal-note">
+            Questions? We're only an email away — visit our
+            <a href="contact.html">Contact</a> page or write to JonDoe@gmail.com
+            and a real human on our team will help.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <i class="fa-solid fa-book-open-reader"></i> PageTurn
+          </div>
+          <p>
+            Your neighbourhood bookshop, online. Discover stories that change
+            the way you see the world.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/nikoloz_bocho/"
+              target="_blank"
+              class="social-link"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/nikolozi.bochorishvili.18"
+              target="_blank"
+              class="social-link"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link" aria-label="Twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="returns.html">Returns &amp; Refunds</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i
+            ><span>500 Book Street, San Francisco, CA 94158</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i><span>+995 555 555 555</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
+        <span
+          >Crafted with
+          <i
+            class="fa-solid fa-heart"
+            style="color: var(--rust); font-size: 0.7rem"
+          ></i>
+          for book lovers</span
+        >
+      </div>
+    </footer>
+
+    <script type="module" src="js/nav.js"></script>
+    <script>
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("scrolled", window.scrollY > 40),
+      );
+    </script>
+  </body>
 </html>

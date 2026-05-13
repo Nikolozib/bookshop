@@ -1,215 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
-  <nav class="navbar" id="navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-logo"><i class="fa-solid fa-book-open-reader"></i> PageTurn</a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="shop.html" class="nav-link">Shop</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="admin.html" class="nav-link active">Admin</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></a>
-        <div id="nav-auth"><a href="auth.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></div>
-        <div id="nav-user" class="nav-user-menu" style="display:none">
-          <div class="nav-user-toggle"><i class="fa-solid fa-circle-user"></i><span id="nav-username"></span></div>
-          <div class="nav-dropdown"><button id="sign-out-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo"
+          ><i class="fa-solid fa-book-open-reader"></i> PageTurn</a
+        >
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="admin.html" class="nav-link active">Admin</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="cart.html" class="nav-icon-btn"
+            ><i class="fa-solid fa-cart-shopping"></i
+            ><span class="cart-badge">0</span></a
+          >
+          <div id="nav-auth">
+            <a href="auth.html" class="btn-nav-login"
+              ><i class="fa-solid fa-right-to-bracket"></i> Sign In</a
+            >
+          </div>
+          <div id="nav-user" class="nav-user-menu" style="display: none">
+            <div class="nav-user-toggle">
+              <i class="fa-solid fa-circle-user"></i
+              ><span id="nav-username"></span>
+            </div>
+            <div class="nav-dropdown">
+              <button id="sign-out-btn">
+                <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+              </button>
+            </div>
+          </div>
+          <button class="menu-toggle" id="menu-toggle">
+            <span></span><span></span><span></span>
+          </button>
         </div>
-        <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <div class="admin-header">
+      <div class="container">
+        <h1>
+          <i
+            class="fa-solid fa-gauge-high"
+            style="color: var(--gold); margin-right: 12px"
+          ></i
+          >Admin Dashboard
+        </h1>
+        <p>Manage your bookshop inventory</p>
       </div>
     </div>
-  </nav>
 
-  <div class="admin-header">
-    <div class="container">
-      <h1><i class="fa-solid fa-gauge-high" style="color:var(--gold);margin-right:12px"></i>Admin Dashboard</h1>
-      <p>Manage your bookshop inventory</p>
+    <div id="admin-denied" class="container">
+      <i class="fa-solid fa-lock"></i>
+      <h2 style="font-family: var(--font-serif); margin-bottom: 12px">
+        Access Restricted
+      </h2>
+      <p style="color: var(--text-light); margin-bottom: 24px">
+        You don't have permission to view this page.
+      </p>
+      <a href="index.html" class="btn btn-primary">Go Home</a>
     </div>
-  </div>
 
-  
-  <div id="admin-denied" class="container">
-    <i class="fa-solid fa-lock"></i>
-    <h2 style="font-family:var(--font-serif);margin-bottom:12px">Access Restricted</h2>
-    <p style="color:var(--text-light);margin-bottom:24px">You don't have permission to view this page.</p>
-    <a href="index.html" class="btn btn-primary">Go Home</a>
-  </div>
-
-  
-  <div id="admin-content" style="display:none">
-    <div class="container">
-      <div class="admin-layout">
-
-        
-        <div class="admin-form-card" id="book-form-section">
-          <h2 id="form-title">Add New Book</h2>
-          <form id="book-form">
-            <div class="form-group">
-              <label for="f-title">Title *</label>
-              <input type="text" id="f-title" class="form-control" required placeholder="Book title">
-            </div>
-            <div class="form-group">
-              <label for="f-author">Author *</label>
-              <input type="text" id="f-author" class="form-control" required placeholder="Author name">
-            </div>
-            <div class="form-group">
-              <label for="f-genre">Genre *</label>
-              <select id="f-genre" class="form-control" required>
-                <option value="">Select genre</option>
-                <option>Fiction</option>
-                <option>Non-Fiction</option>
-                <option>Mystery</option>
-                <option>Thriller</option>
-                <option>Science</option>
-                <option>History</option>
-                <option>Biography</option>
-                <option>Romance</option>
-                <option>Fantasy</option>
-                <option>Self-Help</option>
-                <option>Children</option>
-              </select>
-            </div>
-            <div class="form-row">
+    <div id="admin-content" style="display: none">
+      <div class="container">
+        <div class="admin-layout">
+          <div class="admin-form-card" id="book-form-section">
+            <h2 id="form-title">Add New Book</h2>
+            <form id="book-form">
               <div class="form-group">
-                <label for="f-price">Price ($) *</label>
-                <input type="number" id="f-price" class="form-control" step="0.01" min="0" required placeholder="12.99">
+                <label for="f-title">Title *</label>
+                <input
+                  type="text"
+                  id="f-title"
+                  class="form-control"
+                  required
+                  placeholder="Book title"
+                />
               </div>
               <div class="form-group">
-                <label for="f-original-price">Original Price ($)</label>
-                <input type="number" id="f-original-price" class="form-control" step="0.01" min="0" placeholder="Optional">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="f-description">Description</label>
-              <textarea id="f-description" class="form-control" placeholder="Book description..."></textarea>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="f-pages">Pages</label>
-                <input type="text" id="f-pages" class="form-control" placeholder="320">
+                <label for="f-author">Author *</label>
+                <input
+                  type="text"
+                  id="f-author"
+                  class="form-control"
+                  required
+                  placeholder="Author name"
+                />
               </div>
               <div class="form-group">
-                <label for="f-language">Language</label>
-                <input type="text" id="f-language" class="form-control" placeholder="English">
+                <label for="f-genre">Genre *</label>
+                <select id="f-genre" class="form-control" required>
+                  <option value="">Select genre</option>
+                  <option>Fiction</option>
+                  <option>Non-Fiction</option>
+                  <option>Mystery</option>
+                  <option>Thriller</option>
+                  <option>Science</option>
+                  <option>History</option>
+                  <option>Biography</option>
+                  <option>Romance</option>
+                  <option>Fantasy</option>
+                  <option>Self-Help</option>
+                  <option>Children</option>
+                </select>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="f-publisher">Publisher</label>
-              <input type="text" id="f-publisher" class="form-control" placeholder="Publisher name">
-            </div>
-            <div class="form-group">
-              <label for="f-isbn">ISBN</label>
-              <input type="text" id="f-isbn" class="form-control" placeholder="978-0-000-00000-0">
-            </div>
-            <div class="form-group">
-              <label for="f-image">Cover Image</label>
-              <div class="file-input-wrap">
-                <input type="file" id="f-image" accept="image/*">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-price">Price ($) *</label>
+                  <input
+                    type="number"
+                    id="f-price"
+                    class="form-control"
+                    step="0.01"
+                    min="0"
+                    required
+                    placeholder="12.99"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="f-original-price">Original Price ($)</label>
+                  <input
+                    type="number"
+                    id="f-original-price"
+                    class="form-control"
+                    step="0.01"
+                    min="0"
+                    placeholder="Optional"
+                  />
+                </div>
               </div>
-            </div>
-            <div style="display:flex;gap:20px;margin-bottom:20px">
-              <label class="checkbox-group">
-                <input type="checkbox" id="f-isnew"> New Arrival
-              </label>
-              <label class="checkbox-group">
-                <input type="checkbox" id="f-issale"> On Sale
-              </label>
-            </div>
-            <div class="admin-form-actions">
-              <button type="submit" class="admin-submit">
-                <i class="fa-solid fa-floppy-disk"></i> Add Book
-              </button>
-              <button type="button" class="admin-cancel" id="cancel-edit">Cancel</button>
-            </div>
-            <p id="admin-msg" class="admin-msg"></p>
-          </form>
-        </div>
+              <div class="form-group">
+                <label for="f-description">Description</label>
+                <textarea
+                  id="f-description"
+                  class="form-control"
+                  placeholder="Book description..."
+                ></textarea>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="f-pages">Pages</label>
+                  <input
+                    type="text"
+                    id="f-pages"
+                    class="form-control"
+                    placeholder="320"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="f-language">Language</label>
+                  <input
+                    type="text"
+                    id="f-language"
+                    class="form-control"
+                    placeholder="English"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="f-publisher">Publisher</label>
+                <input
+                  type="text"
+                  id="f-publisher"
+                  class="form-control"
+                  placeholder="Publisher name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="f-isbn">ISBN</label>
+                <input
+                  type="text"
+                  id="f-isbn"
+                  class="form-control"
+                  placeholder="978-0-000-00000-0"
+                />
+              </div>
+              <div class="form-group">
+                <label for="f-image">Cover Image</label>
+                <div class="file-input-wrap">
+                  <input type="file" id="f-image" accept="image/*" />
+                </div>
+              </div>
+              <div style="display: flex; gap: 20px; margin-bottom: 20px">
+                <label class="checkbox-group">
+                  <input type="checkbox" id="f-isnew" /> New Arrival
+                </label>
+                <label class="checkbox-group">
+                  <input type="checkbox" id="f-issale" /> On Sale
+                </label>
+              </div>
+              <div class="admin-form-actions">
+                <button type="submit" class="admin-submit">
+                  <i class="fa-solid fa-floppy-disk"></i> Add Book
+                </button>
+                <button type="button" class="admin-cancel" id="cancel-edit">
+                  Cancel
+                </button>
+              </div>
+              <p id="admin-msg" class="admin-msg"></p>
+            </form>
+          </div>
 
-        
-        <div class="admin-table-card">
-          <h2><i class="fa-solid fa-list" style="color:var(--gold);margin-right:8px"></i>Book Inventory</h2>
-          <div style="overflow-x:auto">
-            <table class="admin-table">
-              <thead>
-                <tr>
-                  <th>Cover</th>
-                  <th>Title</th>
-                  <th>Author</th>
-                  <th>Genre</th>
-                  <th>Price</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody id="books-table-body">
-                <tr><td colspan="6" class="table-empty"><i class="fa-solid fa-spinner fa-spin"></i> Loading...</td></tr>
-              </tbody>
-            </table>
+          <div class="admin-table-card">
+            <h2>
+              <i
+                class="fa-solid fa-list"
+                style="color: var(--gold); margin-right: 8px"
+              ></i
+              >Book Inventory
+            </h2>
+            <div style="overflow-x: auto">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>Cover</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Genre</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="books-table-body">
+                  <tr>
+                    <td colspan="6" class="table-empty">
+                      <i class="fa-solid fa-spinner fa-spin"></i> Loading...
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
-  </div>
 
     <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo-wrap">
-          <i class="fa-solid fa-book-open-reader"></i> PageTurn
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <i class="fa-solid fa-book-open-reader"></i> PageTurn
+          </div>
+          <p>
+            Your neighbourhood bookshop, online. Discover stories that change
+            the way you see the world.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/nikoloz_bocho/"
+              target="_blank"
+              class="social-link"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/nikolozi.bochorishvili.18"
+              target="_blank"
+              class="social-link"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link" aria-label="Twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
         </div>
-        <p>Your neighbourhood bookshop, online. Discover stories that change the way you see the world.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/nikoloz_bocho/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/nikolozi.bochorishvili.18" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="returns.html">Returns &amp; Refunds</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i
+            ><span>500 Book Street, San Francisco, CA 94158</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i><span>+995 555 555 555</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span>
+          </div>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.html">All Books</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
+        <span
+          >Crafted with
+          <i
+            class="fa-solid fa-heart"
+            style="color: var(--rust); font-size: 0.7rem"
+          ></i>
+          for book lovers</span
+        >
       </div>
-      <div class="footer-col">
-        <h4>Help</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="returns.html">Returns &amp; Refunds</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>500 Book Street, San Francisco, CA 94158</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+995 555 555 555</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span></div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
-      <span>Crafted with <i class="fa-solid fa-heart" style="color:var(--rust);font-size:0.7rem"></i> for book lovers</span>
-    </div>
-  </footer>
+    </footer>
 
-  <script type="module" src="js/nav.js"></script>
-  <script type="module" src="js/admin.js"></script>
-  <script>
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
-  </script>
-</body>
+    <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/admin.js"></script>
+    <script>
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("scrolled", window.scrollY > 40),
+      );
+    </script>
+  </body>
 </html>

@@ -1,244 +1,469 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
-  <nav class="navbar" id="navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-logo"><i class="fa-solid fa-book-open-reader"></i> PageTurn</a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="shop.html" class="nav-link">Shop</a></li>
-        <li><a href="about.html" class="nav-link active">About</a></li>
-        <li id="nav-admin" style="display:none"><a href="admin.html" class="nav-link">Admin</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></a>
-        <div id="nav-auth"><a href="auth.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></div>
-        <div id="nav-user" class="nav-user-menu" style="display:none">
-          <div class="nav-user-toggle"><i class="fa-solid fa-circle-user"></i><span id="nav-username"></span></div>
-          <div class="nav-dropdown"><button id="sign-out-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button></div>
-        </div>
-        <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
-      </div>
-    </div>
-  </nav>
-
-  <div class="page-header">
-    <div class="container">
-      <h1>Our Story</h1>
-      <p>A passion for books, turned into a place for everyone</p>
-    </div>
-  </div>
-
-  
-  <section class="container">
-    <div class="about-intro">
-      <img
-        src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80"
-        alt="Inside our bookshop"
-        class="about-img"
-      >
-      <div class="about-text">
-        <h2 class="section-title">Born From a Love of Reading</h2>
-        <p>PageTurn started in 2018 as a small shelf of handpicked books in a San Francisco coffee shop. What began as a weekend hobby quickly became something much bigger — a community of readers who believe the right book at the right moment can genuinely change a life.</p>
-        <p>Today we stock over 5,000 titles across every genre imaginable. Our team reads every book we carry and writes honest, personal notes about why it deserves a place on your shelf.</p>
-        <p>We believe bookshops should feel warm, welcoming, and a little bit magical — and we've tried to bring that spirit to every corner of our online store.</p>
-        <a href="shop.html" class="btn btn-primary" style="margin-top:8px">
-          <i class="fa-solid fa-book-open"></i> Explore Our Collection
-        </a>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="section" style="background:var(--cream-dark)">
-    <div class="container">
-      <h2 class="section-title" style="text-align:center;margin-bottom:8px">What We Stand For</h2>
-      <p class="section-subtitle" style="text-align:center">The values that guide everything we do</p>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px;margin-top:20px">
-        <div style="background:var(--white);padding:32px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
-          <i class="fa-solid fa-seedling" style="color:var(--gold);font-size:1.6rem;margin-bottom:16px;display:block"></i>
-          <h3 style="font-family:var(--font-serif);margin-bottom:10px">Sustainability</h3>
-          <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7">We partner with publishers who use recycled paper and offset their carbon footprint. Our packaging is 100% recyclable.</p>
-        </div>
-        <div style="background:var(--white);padding:32px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
-          <i class="fa-solid fa-people-group" style="color:var(--gold);font-size:1.6rem;margin-bottom:16px;display:block"></i>
-          <h3 style="font-family:var(--font-serif);margin-bottom:10px">Community</h3>
-          <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7">Books bring people together. We run monthly reading groups, author events, and donate a portion of every sale to literacy charities.</p>
-        </div>
-        <div style="background:var(--white);padding:32px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
-          <i class="fa-solid fa-star" style="color:var(--gold);font-size:1.6rem;margin-bottom:16px;display:block"></i>
-          <h3 style="font-family:var(--font-serif);margin-bottom:10px">Curation</h3>
-          <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7">Every title on our shelves has been read and recommended by a real human. No algorithm, no filler — just books we genuinely love.</p>
-        </div>
-        <div style="background:var(--white);padding:32px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
-          <i class="fa-solid fa-lock-open" style="color:var(--gold);font-size:1.6rem;margin-bottom:16px;display:block"></i>
-          <h3 style="font-family:var(--font-serif);margin-bottom:10px">Accessibility</h3>
-          <p style="color:var(--text-light);font-size:0.9rem;line-height:1.7">Great books should be affordable. We offer regular sales, a student discount programme, and free shipping on orders over $35.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title" style="text-align:center;margin-bottom:8px">Meet the Team</h2>
-      <p class="section-subtitle" style="text-align:center">The readers behind PageTurn</p>
-      <div class="team-grid">
-        <div class="team-card">
-          <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
-          <h4>Sarah Mitchell</h4>
-          <p>Founder & Head Curator</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
-          <h4>James Park</h4>
-          <p>Fiction Specialist</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
-          <h4>Priya Sharma</h4>
-          <p>Non-Fiction Editor</p>
-        </div>
-        <div class="team-card">
-          <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
-          <h4>Tom Ellis</h4>
-          <p>Children's Books Lead</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="contact-layout">
-        <div class="contact-info">
-          <h2>Get in Touch</h2>
-          <p style="color:var(--text-light);margin-bottom:32px">Have a question, a book recommendation, or just want to say hello? We'd love to hear from you.</p>
-          <div class="contact-item">
-            <i class="fa-solid fa-location-dot"></i>
-            <div>
-              <h4>Address</h4>
-              <p>500 Book Street, San Francisco, CA 94158</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo"
+          ><i class="fa-solid fa-book-open-reader"></i> PageTurn</a
+        >
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="about.html" class="nav-link active">About</a></li>
+          <li id="nav-admin" style="display: none">
+            <a href="admin.html" class="nav-link">Admin</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="cart.html" class="nav-icon-btn"
+            ><i class="fa-solid fa-cart-shopping"></i
+            ><span class="cart-badge">0</span></a
+          >
+          <div id="nav-auth">
+            <a href="auth.html" class="btn-nav-login"
+              ><i class="fa-solid fa-right-to-bracket"></i> Sign In</a
+            >
+          </div>
+          <div id="nav-user" class="nav-user-menu" style="display: none">
+            <div class="nav-user-toggle">
+              <i class="fa-solid fa-circle-user"></i
+              ><span id="nav-username"></span>
+            </div>
+            <div class="nav-dropdown">
+              <button id="sign-out-btn">
+                <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+              </button>
             </div>
           </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-phone"></i>
-            <div>
-              <h4>Phone</h4>
-              <p>+995 555 555 555</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-envelope"></i>
-            <div>
-              <h4>Email</h4>
-              <p>JonDoe@gmail.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <i class="fa-solid fa-clock"></i>
-            <div>
-              <h4>Hours</h4>
-              <p>Mon–Fri: 9am–6pm<br>Sat–Sun: 10am–4pm</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form-wrap">
-          <h3 style="font-family:var(--font-serif);font-size:1.4rem;margin-bottom:24px">Send a Message</h3>
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="contact-name">Your Name</label>
-              <input type="text" id="contact-name" class="form-control" placeholder="Jon Doe" required>
-            </div>
-            <div class="form-group">
-              <label for="contact-email">Email Address</label>
-              <input type="email" id="contact-email" class="form-control" placeholder="JonDoe@gmail.com" required>
-            </div>
-            <div class="form-group">
-              <label for="contact-subject">Subject</label>
-              <input type="text" id="contact-subject" class="form-control" placeholder="How can we help?">
-            </div>
-            <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea id="contact-message" class="form-control" rows="5" placeholder="Your message..." required></textarea>
-            </div>
-            <button type="submit" class="contact-submit">
-              <i class="fa-solid fa-paper-plane"></i> Send Message
-            </button>
-            <p id="contact-msg" class="form-msg" style="margin-top:12px"></p>
-          </form>
+          <button class="menu-toggle" id="menu-toggle">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </div>
+    </nav>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Our Story</h1>
+        <p>A passion for books, turned into a place for everyone</p>
+      </div>
     </div>
-  </section>
+
+    <section class="container">
+      <div class="about-intro">
+        <img
+          src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800&q=80"
+          alt="Inside our bookshop"
+          class="about-img"
+        />
+        <div class="about-text">
+          <h2 class="section-title">Born From a Love of Reading</h2>
+          <p>
+            PageTurn started in 2018 as a small shelf of handpicked books in a
+            San Francisco coffee shop. What began as a weekend hobby quickly
+            became something much bigger — a community of readers who believe
+            the right book at the right moment can genuinely change a life.
+          </p>
+          <p>
+            Today we stock over 5,000 titles across every genre imaginable. Our
+            team reads every book we carry and writes honest, personal notes
+            about why it deserves a place on your shelf.
+          </p>
+          <p>
+            We believe bookshops should feel warm, welcoming, and a little bit
+            magical — and we've tried to bring that spirit to every corner of
+            our online store.
+          </p>
+          <a href="shop.html" class="btn btn-primary" style="margin-top: 8px">
+            <i class="fa-solid fa-book-open"></i> Explore Our Collection
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background: var(--cream-dark)">
+      <div class="container">
+        <h2
+          class="section-title"
+          style="text-align: center; margin-bottom: 8px"
+        >
+          What We Stand For
+        </h2>
+        <p class="section-subtitle" style="text-align: center">
+          The values that guide everything we do
+        </p>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 28px;
+            margin-top: 20px;
+          "
+        >
+          <div
+            style="
+              background: var(--white);
+              padding: 32px;
+              border-radius: var(--radius-md);
+              box-shadow: var(--shadow-sm);
+            "
+          >
+            <i
+              class="fa-solid fa-seedling"
+              style="
+                color: var(--gold);
+                font-size: 1.6rem;
+                margin-bottom: 16px;
+                display: block;
+              "
+            ></i>
+            <h3 style="font-family: var(--font-serif); margin-bottom: 10px">
+              Sustainability
+            </h3>
+            <p
+              style="
+                color: var(--text-light);
+                font-size: 0.9rem;
+                line-height: 1.7;
+              "
+            >
+              We partner with publishers who use recycled paper and offset their
+              carbon footprint. Our packaging is 100% recyclable.
+            </p>
+          </div>
+          <div
+            style="
+              background: var(--white);
+              padding: 32px;
+              border-radius: var(--radius-md);
+              box-shadow: var(--shadow-sm);
+            "
+          >
+            <i
+              class="fa-solid fa-people-group"
+              style="
+                color: var(--gold);
+                font-size: 1.6rem;
+                margin-bottom: 16px;
+                display: block;
+              "
+            ></i>
+            <h3 style="font-family: var(--font-serif); margin-bottom: 10px">
+              Community
+            </h3>
+            <p
+              style="
+                color: var(--text-light);
+                font-size: 0.9rem;
+                line-height: 1.7;
+              "
+            >
+              Books bring people together. We run monthly reading groups, author
+              events, and donate a portion of every sale to literacy charities.
+            </p>
+          </div>
+          <div
+            style="
+              background: var(--white);
+              padding: 32px;
+              border-radius: var(--radius-md);
+              box-shadow: var(--shadow-sm);
+            "
+          >
+            <i
+              class="fa-solid fa-star"
+              style="
+                color: var(--gold);
+                font-size: 1.6rem;
+                margin-bottom: 16px;
+                display: block;
+              "
+            ></i>
+            <h3 style="font-family: var(--font-serif); margin-bottom: 10px">
+              Curation
+            </h3>
+            <p
+              style="
+                color: var(--text-light);
+                font-size: 0.9rem;
+                line-height: 1.7;
+              "
+            >
+              Every title on our shelves has been read and recommended by a real
+              human. No algorithm, no filler — just books we genuinely love.
+            </p>
+          </div>
+          <div
+            style="
+              background: var(--white);
+              padding: 32px;
+              border-radius: var(--radius-md);
+              box-shadow: var(--shadow-sm);
+            "
+          >
+            <i
+              class="fa-solid fa-lock-open"
+              style="
+                color: var(--gold);
+                font-size: 1.6rem;
+                margin-bottom: 16px;
+                display: block;
+              "
+            ></i>
+            <h3 style="font-family: var(--font-serif); margin-bottom: 10px">
+              Accessibility
+            </h3>
+            <p
+              style="
+                color: var(--text-light);
+                font-size: 0.9rem;
+                line-height: 1.7;
+              "
+            >
+              Great books should be affordable. We offer regular sales, a
+              student discount programme, and free shipping on orders over $35.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2
+          class="section-title"
+          style="text-align: center; margin-bottom: 8px"
+        >
+          Meet the Team
+        </h2>
+        <p class="section-subtitle" style="text-align: center">
+          The readers behind PageTurn
+        </p>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
+            <h4>Sarah Mitchell</h4>
+            <p>Founder & Head Curator</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
+            <h4>James Park</h4>
+            <p>Fiction Specialist</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
+            <h4>Priya Sharma</h4>
+            <p>Non-Fiction Editor</p>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar"><i class="fa-solid fa-user"></i></div>
+            <h4>Tom Ellis</h4>
+            <p>Children's Books Lead</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info">
+            <h2>Get in Touch</h2>
+            <p style="color: var(--text-light); margin-bottom: 32px">
+              Have a question, a book recommendation, or just want to say hello?
+              We'd love to hear from you.
+            </p>
+            <div class="contact-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <div>
+                <h4>Address</h4>
+                <p>500 Book Street, San Francisco, CA 94158</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <div>
+                <h4>Phone</h4>
+                <p>+995 555 555 555</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <div>
+                <h4>Email</h4>
+                <p>JonDoe@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-clock"></i>
+              <div>
+                <h4>Hours</h4>
+                <p>Mon–Fri: 9am–6pm<br />Sat–Sun: 10am–4pm</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <h3
+              style="
+                font-family: var(--font-serif);
+                font-size: 1.4rem;
+                margin-bottom: 24px;
+              "
+            >
+              Send a Message
+            </h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  class="form-control"
+                  placeholder="Jon Doe"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  class="form-control"
+                  placeholder="JonDoe@gmail.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input
+                  type="text"
+                  id="contact-subject"
+                  class="form-control"
+                  placeholder="How can we help?"
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Your message..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="contact-submit">
+                <i class="fa-solid fa-paper-plane"></i> Send Message
+              </button>
+              <p id="contact-msg" class="form-msg" style="margin-top: 12px"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo-wrap">
-          <i class="fa-solid fa-book-open-reader"></i> PageTurn
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <i class="fa-solid fa-book-open-reader"></i> PageTurn
+          </div>
+          <p>
+            Your neighbourhood bookshop, online. Discover stories that change
+            the way you see the world.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/nikoloz_bocho/"
+              target="_blank"
+              class="social-link"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/nikolozi.bochorishvili.18"
+              target="_blank"
+              class="social-link"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link" aria-label="Twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
         </div>
-        <p>Your neighbourhood bookshop, online. Discover stories that change the way you see the world.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/nikoloz_bocho/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/nikolozi.bochorishvili.18" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="returns.html">Returns &amp; Refunds</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i
+            ><span>500 Book Street, San Francisco, CA 94158</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i><span>+995 555 555 555</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span>
+          </div>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.html">All Books</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
+        <span
+          >Crafted with
+          <i
+            class="fa-solid fa-heart"
+            style="color: var(--rust); font-size: 0.7rem"
+          ></i>
+          for book lovers</span
+        >
       </div>
-      <div class="footer-col">
-        <h4>Help</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="returns.html">Returns &amp; Refunds</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>500 Book Street, San Francisco, CA 94158</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+995 555 555 555</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span></div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
-      <span>Crafted with <i class="fa-solid fa-heart" style="color:var(--rust);font-size:0.7rem"></i> for book lovers</span>
-    </div>
-  </footer>
+    </footer>
 
-  <script type="module" src="js/nav.js"></script>
-  <script>
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
+    <script type="module" src="js/nav.js"></script>
+    <script>
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("scrolled", window.scrollY > 40),
+      );
 
-    document.getElementById("contact-form").addEventListener("submit", (e) => {
-      e.preventDefault();
-      const msg = document.getElementById("contact-msg");
-      msg.textContent = "Thank you! We'll get back to you within 24 hours.";
-      msg.className = "form-msg success";
-      e.target.reset();
-    });
-  </script>
-</body>
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", (e) => {
+          e.preventDefault();
+          const msg = document.getElementById("contact-msg");
+          msg.textContent = "Thank you! We'll get back to you within 24 hours.";
+          msg.className = "form-msg success";
+          e.target.reset();
+        });
+    </script>
+  </body>
 </html>

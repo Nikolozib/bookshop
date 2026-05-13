@@ -1,148 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/shop.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-
-  <nav class="navbar" id="navbar">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-logo"><i class="fa-solid fa-book-open-reader"></i> PageTurn</a>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="shop.html" class="nav-link active">Shop</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li id="nav-admin" style="display:none"><a href="admin.html" class="nav-link">Admin</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="cart.html" class="nav-icon-btn"><i class="fa-solid fa-cart-shopping"></i><span class="cart-badge">0</span></a>
-        <div id="nav-auth"><a href="auth.html" class="btn-nav-login"><i class="fa-solid fa-right-to-bracket"></i> Sign In</a></div>
-        <div id="nav-user" class="nav-user-menu" style="display:none">
-          <div class="nav-user-toggle"><i class="fa-solid fa-circle-user"></i><span id="nav-username"></span></div>
-          <div class="nav-dropdown"><button id="sign-out-btn"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</button></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="nav-logo"
+          ><i class="fa-solid fa-book-open-reader"></i> PageTurn</a
+        >
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shop.html" class="nav-link active">Shop</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li id="nav-admin" style="display: none">
+            <a href="admin.html" class="nav-link">Admin</a>
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a href="cart.html" class="nav-icon-btn"
+            ><i class="fa-solid fa-cart-shopping"></i
+            ><span class="cart-badge">0</span></a
+          >
+          <div id="nav-auth">
+            <a href="auth.html" class="btn-nav-login"
+              ><i class="fa-solid fa-right-to-bracket"></i> Sign In</a
+            >
+          </div>
+          <div id="nav-user" class="nav-user-menu" style="display: none">
+            <div class="nav-user-toggle">
+              <i class="fa-solid fa-circle-user"></i
+              ><span id="nav-username"></span>
+            </div>
+            <div class="nav-dropdown">
+              <button id="sign-out-btn">
+                <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+              </button>
+            </div>
+          </div>
+          <button class="menu-toggle" id="menu-toggle">
+            <span></span><span></span><span></span>
+          </button>
         </div>
-        <button class="menu-toggle" id="menu-toggle"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+
+    <div class="page-header">
+      <div class="container">
+        <h1>Browse Our Collection</h1>
+        <p>Thousands of titles waiting to be discovered</p>
       </div>
     </div>
-  </nav>
 
-  <div class="page-header">
-    <div class="container">
-      <h1>Browse Our Collection</h1>
-      <p>Thousands of titles waiting to be discovered</p>
-    </div>
-  </div>
+    <section class="section">
+      <div class="container">
+        <div style="margin-bottom: 16px">
+          <button class="sidebar-toggle" id="sidebar-toggle">
+            <i class="fa-solid fa-sliders"></i> Filters
+          </button>
+        </div>
 
-  <section class="section">
-    <div class="container">
-      
-      <div style="margin-bottom:16px">
-        <button class="sidebar-toggle" id="sidebar-toggle">
-          <i class="fa-solid fa-sliders"></i> Filters
-        </button>
-      </div>
-
-      <div class="shop-layout">
-        
-        <aside class="shop-sidebar" id="shop-sidebar">
-          <div class="sidebar-section">
-            <h3 class="sidebar-title">Genre</h3>
-            <div class="genre-list">
-              <button class="genre-btn active" data-genre="all">All Books</button>
-              <button class="genre-btn" data-genre="Fiction">Fiction</button>
-              <button class="genre-btn" data-genre="Non-Fiction">Non-Fiction</button>
-              <button class="genre-btn" data-genre="Mystery">Mystery</button>
-              <button class="genre-btn" data-genre="Thriller">Thriller</button>
-              <button class="genre-btn" data-genre="Science">Science</button>
-              <button class="genre-btn" data-genre="History">History</button>
-              <button class="genre-btn" data-genre="Biography">Biography</button>
-              <button class="genre-btn" data-genre="Romance">Romance</button>
-              <button class="genre-btn" data-genre="Fantasy">Fantasy</button>
-              <button class="genre-btn" data-genre="Self-Help">Self-Help</button>
-              <button class="genre-btn" data-genre="Children">Children</button>
+        <div class="shop-layout">
+          <aside class="shop-sidebar" id="shop-sidebar">
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Genre</h3>
+              <div class="genre-list">
+                <button class="genre-btn active" data-genre="all">
+                  All Books
+                </button>
+                <button class="genre-btn" data-genre="Fiction">Fiction</button>
+                <button class="genre-btn" data-genre="Non-Fiction">
+                  Non-Fiction
+                </button>
+                <button class="genre-btn" data-genre="Mystery">Mystery</button>
+                <button class="genre-btn" data-genre="Thriller">
+                  Thriller
+                </button>
+                <button class="genre-btn" data-genre="Science">Science</button>
+                <button class="genre-btn" data-genre="History">History</button>
+                <button class="genre-btn" data-genre="Biography">
+                  Biography
+                </button>
+                <button class="genre-btn" data-genre="Romance">Romance</button>
+                <button class="genre-btn" data-genre="Fantasy">Fantasy</button>
+                <button class="genre-btn" data-genre="Self-Help">
+                  Self-Help
+                </button>
+                <button class="genre-btn" data-genre="Children">
+                  Children
+                </button>
+              </div>
             </div>
-          </div>
-        </aside>
+          </aside>
 
-        
-        <main>
-          <div class="shop-toolbar">
-            <span id="results-count"></span>
-            <div class="shop-search">
-              <input type="text" id="search-input" placeholder="Search by title or author...">
-              <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <main>
+            <div class="shop-toolbar">
+              <span id="results-count"></span>
+              <div class="shop-search">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search by title or author..."
+                />
+                <button id="search-btn">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+              <select id="sort-select">
+                <option value="newest">Newest First</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="title">Title A–Z</option>
+              </select>
             </div>
-            <select id="sort-select">
-              <option value="newest">Newest First</option>
-              <option value="price-asc">Price: Low to High</option>
-              <option value="price-desc">Price: High to Low</option>
-              <option value="title">Title A–Z</option>
-            </select>
-          </div>
-          <div class="books-grid" id="shop-grid">
-            <div class="loading-books"><i class="fa-solid fa-spinner fa-spin"></i> Loading books...</div>
-          </div>
-        </main>
+            <div class="books-grid" id="shop-grid">
+              <div class="loading-books">
+                <i class="fa-solid fa-spinner fa-spin"></i> Loading books...
+              </div>
+            </div>
+          </main>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
     <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <div class="logo-wrap">
-          <i class="fa-solid fa-book-open-reader"></i> PageTurn
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="logo-wrap">
+            <i class="fa-solid fa-book-open-reader"></i> PageTurn
+          </div>
+          <p>
+            Your neighbourhood bookshop, online. Discover stories that change
+            the way you see the world.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/nikoloz_bocho/"
+              target="_blank"
+              class="social-link"
+              aria-label="Instagram"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.facebook.com/nikolozi.bochorishvili.18"
+              target="_blank"
+              class="social-link"
+              aria-label="Facebook"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-link" aria-label="Twitter"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
         </div>
-        <p>Your neighbourhood bookshop, online. Discover stories that change the way you see the world.</p>
-        <div class="footer-socials">
-          <a href="https://www.instagram.com/nikoloz_bocho/" target="_blank" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/nikolozi.bochorishvili.18" target="_blank" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html">All Books</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="returns.html">Returns &amp; Refunds</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i
+            ><span>500 Book Street, San Francisco, CA 94158</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i><span>+995 555 555 555</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span>
+          </div>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <ul>
-          <li><a href="shop.html">All Books</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
+        <span
+          >Crafted with
+          <i
+            class="fa-solid fa-heart"
+            style="color: var(--rust); font-size: 0.7rem"
+          ></i>
+          for book lovers</span
+        >
       </div>
-      <div class="footer-col">
-        <h4>Help</h4>
-        <ul>
-          <li><a href="contact.html">Contact Us</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="returns.html">Returns &amp; Refunds</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>500 Book Street, San Francisco, CA 94158</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-phone"></i><span>+995 555 555 555</span></div>
-        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><span>JonDoe@gmail.com</span></div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 PageTurn Books. All rights reserved.</span>
-      <span>Crafted with <i class="fa-solid fa-heart" style="color:var(--rust);font-size:0.7rem"></i> for book lovers</span>
-    </div>
-  </footer>
+    </footer>
 
-  <script type="module" src="js/nav.js"></script>
-  <script type="module" src="js/shop-page.js"></script>
-  <script>
-    const navbar = document.getElementById("navbar");
-    window.addEventListener("scroll", () => navbar.classList.toggle("scrolled", window.scrollY > 40));
-    document.getElementById("sidebar-toggle").addEventListener("click", () => {
-      document.getElementById("shop-sidebar").classList.toggle("open");
-    });
-  </script>
-</body>
+    <script type="module" src="js/nav.js"></script>
+    <script type="module" src="js/shop-page.js"></script>
+    <script>
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () =>
+        navbar.classList.toggle("scrolled", window.scrollY > 40),
+      );
+      document
+        .getElementById("sidebar-toggle")
+        .addEventListener("click", () => {
+          document.getElementById("shop-sidebar").classList.toggle("open");
+        });
+    </script>
+  </body>
 </html>
