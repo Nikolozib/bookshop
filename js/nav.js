@@ -12,8 +12,8 @@ function updateCartCount() {
 }
 
 onAuthStateChanged(auth, async (user) => {
-  const navAuth  = document.getElementById("nav-auth");
-  const navUser  = document.getElementById("nav-user");
+  const navAuth = document.getElementById("nav-auth");
+  const navUser = document.getElementById("nav-user");
   const navAdmin = document.getElementById("nav-admin");
 
   if (user) {
@@ -28,7 +28,7 @@ onAuthStateChanged(auth, async (user) => {
       if (userDoc.exists() && userDoc.data().role === "admin") {
         if (navAdmin) navAdmin.style.display = "flex";
       }
-    } catch {}
+    } catch { }
   } else {
     if (navAuth) navAuth.style.display = "flex";
     if (navUser) navUser.style.display = "none";
@@ -47,7 +47,7 @@ if (userMenu) {
       dropdown.classList.toggle("open");
     });
 
-    
+
     document.addEventListener("click", (e) => {
       if (!userMenu.contains(e.target)) {
         dropdown.classList.remove("open");
@@ -70,7 +70,7 @@ if (signOutBtn) {
 }
 
 const menuToggle = document.getElementById("menu-toggle");
-const navLinks   = document.getElementById("nav-links");
+const navLinks = document.getElementById("nav-links");
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("open");

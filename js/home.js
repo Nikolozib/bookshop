@@ -1,7 +1,7 @@
 import { loadBooks, createBookCard } from "./shop.js";
 
 async function initHome() {
-  
+
   const allBooks = await loadBooks({});
   const genres = [...new Set(allBooks.map(b => b.genre).filter(Boolean))].sort();
 
@@ -36,7 +36,7 @@ async function initHome() {
     });
   }
 
-  
+
   const featuredGrid = document.getElementById("featured-grid");
   if (featuredGrid) {
     featuredGrid.innerHTML = `<div class="loading-books"><i class="fa-solid fa-spinner fa-spin"></i> Loading books...</div>`;
@@ -49,7 +49,7 @@ async function initHome() {
     }
   }
 
-  
+
   const newGrid = document.getElementById("new-arrivals-grid");
   if (newGrid) {
     const books = await loadBooks({ limit: 4 });
@@ -57,7 +57,7 @@ async function initHome() {
     books.forEach(book => newGrid.appendChild(createBookCard(book)));
   }
 
-  
+
   const newsletterForm = document.getElementById("newsletter-form");
   if (newsletterForm) {
     newsletterForm.addEventListener("submit", (e) => {

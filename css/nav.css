@@ -3,10 +3,13 @@
   top: 0;
   z-index: 1000;
   background: var(--brown-dark);
-  border-bottom: 1px solid rgba(201,168,76,0.15);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
   transition: box-shadow 0.3s;
 }
-.navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+
+.navbar.scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
 
 .navbar-inner {
   display: flex;
@@ -29,7 +32,11 @@
   cursor: pointer;
   flex-shrink: 0;
 }
-.nav-logo i { color: var(--gold); font-size: 1.3rem; }
+
+.nav-logo i {
+  color: var(--gold);
+  font-size: 1.3rem;
+}
 
 .nav-links {
   display: flex;
@@ -37,8 +44,9 @@
   gap: 6px;
   list-style: none;
 }
+
 .nav-link {
-  color: rgba(255,255,255,0.75);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -48,7 +56,12 @@
   transition: color var(--transition), background var(--transition);
   cursor: pointer;
 }
-.nav-link:hover, .nav-link.active { color: var(--gold); background: rgba(201,168,76,0.1); }
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+}
 
 .nav-actions {
   display: flex;
@@ -64,12 +77,16 @@
   width: 40px;
   height: 40px;
   border-radius: var(--radius);
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
   font-size: 1.1rem;
   transition: color var(--transition), background var(--transition);
   cursor: pointer;
 }
-.nav-icon-btn:hover { color: var(--gold); background: rgba(201,168,76,0.1); }
+
+.nav-icon-btn:hover {
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+}
 
 .cart-badge {
   position: absolute;
@@ -101,16 +118,20 @@
   transition: background var(--transition);
   cursor: pointer;
 }
-.btn-nav-login:hover { background: var(--rust-hover); }
+
+.btn-nav-login:hover {
+  background: var(--rust-hover);
+}
 
 .nav-user-menu {
   position: relative;
 }
+
 .nav-user-toggle {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.9rem;
   font-weight: 700;
   padding: 8px 12px;
@@ -119,8 +140,14 @@
   cursor: pointer;
   user-select: none;
 }
-.nav-user-toggle:hover { background: rgba(255,255,255,0.08); }
-.nav-user-toggle i { color: var(--gold); }
+
+.nav-user-toggle:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-user-toggle i {
+  color: var(--gold);
+}
 
 .nav-dropdown {
   position: absolute;
@@ -133,11 +160,14 @@
   overflow: hidden;
   flex-direction: column;
   border: 1px solid var(--cream-dark);
-  
+
   display: none;
   z-index: 999;
 }
-.nav-dropdown.open { display: flex; }
+
+.nav-dropdown.open {
+  display: flex;
+}
 
 .nav-dropdown a,
 .nav-dropdown button {
@@ -156,9 +186,17 @@
   border: none;
   font-family: inherit;
 }
+
 .nav-dropdown a:hover,
-.nav-dropdown button:hover { background: var(--cream); color: var(--rust); }
-.nav-dropdown i { width: 16px; color: var(--text-light); }
+.nav-dropdown button:hover {
+  background: var(--cream);
+  color: var(--rust);
+}
+
+.nav-dropdown i {
+  width: 16px;
+  color: var(--text-light);
+}
 
 .menu-toggle {
   display: none;
@@ -169,6 +207,7 @@
   background: none;
   border: none;
 }
+
 .menu-toggle span {
   display: block;
   width: 22px;
@@ -177,12 +216,24 @@
   border-radius: 2px;
   transition: all 0.3s;
 }
-.menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.menu-toggle.active span:nth-child(2) { opacity: 0; }
-.menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
 
 @media (max-width: 900px) {
-  .menu-toggle { display: flex; }
+  .menu-toggle {
+    display: flex;
+  }
+
   .nav-links {
     display: none;
     position: absolute;
@@ -194,9 +245,22 @@
     align-items: flex-start;
     gap: 0;
     padding: 16px 0;
-    border-bottom: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.15);
   }
-  .nav-links.open { display: flex; justify-content: center; align-items: center; }
-  .nav-link { width: 100%; padding: 8px 15px; border-radius: 5px; }
-  .navbar-inner { position: relative; }
+
+  .nav-links.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 5px;
+  }
+
+  .navbar-inner {
+    position: relative;
+  }
 }

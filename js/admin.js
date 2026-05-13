@@ -5,7 +5,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-storage.js";
 
-const BOOKS_COL = "Books"; 
+const BOOKS_COL = "Books";
 let editingId = null;
 
 onAuthStateChanged(auth, async (user) => {
@@ -39,7 +39,7 @@ async function loadBooks() {
     tbody.innerHTML = "";
     snap.forEach(d => {
       const book = { id: d.id, ...d.data() };
-      
+
       const title = book.title || book.name || "Untitled";
       const imageUrl = book.imageUrl || book.coverImage || "assets/images/placeholder.svg";
       const tr = document.createElement("tr");
@@ -86,7 +86,7 @@ if (bookForm) {
       updatedAt: new Date().toISOString()
     };
 
-    
+
     const imageFile = document.getElementById("f-image").files[0];
     if (imageFile) {
       try {
@@ -100,13 +100,13 @@ if (bookForm) {
         return;
       }
     } else if (editingId) {
-      
+
       try {
         const existing = await getDoc(doc(db, BOOKS_COL, editingId));
         if (existing.exists()) {
           data.imageUrl = existing.data().imageUrl || existing.data().coverImage || "";
         }
-      } catch {}
+      } catch { }
     }
 
     try {

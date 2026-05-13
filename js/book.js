@@ -54,7 +54,7 @@ async function loadBook() {
     priceEl.innerHTML = `<span class="price-current">$${Number(book.price).toFixed(2)}</span>`;
   }
 
-  
+
   const addBtn = document.getElementById("add-to-cart-btn");
   if (addBtn) {
     addBtn.addEventListener("click", () => {
@@ -62,7 +62,7 @@ async function loadBook() {
     });
   }
 
-  
+
   const relatedSnap = await getDocs(query(
     collection(db, "Books"),
     where("genre", "==", book.genre),

@@ -37,7 +37,7 @@ async function buildGenreFilters() {
     genreList.appendChild(btn);
   });
 
-  
+
   const params = new URLSearchParams(window.location.search);
   const genreParam = params.get("genre");
   if (genreParam) {
@@ -47,7 +47,7 @@ async function buildGenreFilters() {
     });
   }
 
-  
+
   genreList.querySelectorAll(".genre-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       genreList.querySelectorAll(".genre-btn").forEach(b => b.classList.remove("active"));

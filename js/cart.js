@@ -111,7 +111,7 @@ if (checkoutForm) {
     btn.disabled = true;
     btn.textContent = "Processing...";
 
-    
+
     setTimeout(() => {
       localStorage.removeItem("cart");
       document.getElementById("checkout-success").style.display = "block";
